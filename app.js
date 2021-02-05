@@ -37,11 +37,16 @@ const displayCountryDetails = name => {
 const renderCountryInfo = data => {
     console.log(data);
     const countryDiv = document.getElementById('countryDetails');
+    countryDiv.style.display = "block";
+    setTimeout(() => {
+        countryDiv.style.display = "none";
+    }, 3000);
     countryDiv.innerHTML = `
-        <h1>${data.name}</h1>
-        <p>Population: ${data.population}</p>
-        <p>Area: ${data.area}</p>
+        <h1 style="color: tomato;">${data.name}</h1>
+        <h3>Population: ${data.population}</h3>
+        <h4>Area: ${data.area}</h4>
         <img class ="img-fluid" src="${data.flag}" alt="flag image">
-
+        <br>
+        <p class="fw-bold">Flag Image</p>
     `
 }
