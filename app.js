@@ -41,7 +41,7 @@ const renderCountryInfo = data => {
         <h1>${data.name}</h1>
         <p>Population: ${data.population}</p>
         <p>Area: ${data.area}</p>
-        <img src="${data.flag}" alt="flag image">
+        <img class ="img-fluid" src="${data.flag}" alt="flag image">
 
     `
 }
